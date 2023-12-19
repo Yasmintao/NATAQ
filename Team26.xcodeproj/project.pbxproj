@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80429182B309E00009C11C3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80429172B309E00009C11C3 /* MainView.swift */; };
 		C83577942B305D0500CCDE31 /* Team26App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577932B305D0500CCDE31 /* Team26App.swift */; };
 		C83577962B305D0500CCDE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577952B305D0500CCDE31 /* ContentView.swift */; };
 		C83577982B305D0700CCDE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83577972B305D0700CCDE31 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		C83577A52B305D0700CCDE31 /* Team26Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577A42B305D0700CCDE31 /* Team26Tests.swift */; };
 		C83577AF2B305D0700CCDE31 /* Team26UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577AE2B305D0700CCDE31 /* Team26UITests.swift */; };
 		C83577B12B305D0700CCDE31 /* Team26UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577B02B305D0700CCDE31 /* Team26UITestsLaunchTests.swift */; };
+		C83577BE2B305E5900CCDE31 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577BD2B305E5900CCDE31 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C80429172B309E00009C11C3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C83577902B305D0500CCDE31 /* Team26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Team26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83577932B305D0500CCDE31 /* Team26App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team26App.swift; sourceTree = "<group>"; };
-		C83577952B305D0500CCDE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C83577952B305D0500CCDE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		C83577972B305D0700CCDE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C835779A2B305D0700CCDE31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C83577A02B305D0700CCDE31 /* Team26Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Team26Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,7 @@
 		C83577AA2B305D0700CCDE31 /* Team26UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Team26UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83577AE2B305D0700CCDE31 /* Team26UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team26UITests.swift; sourceTree = "<group>"; };
 		C83577B02B305D0700CCDE31 /* Team26UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team26UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C83577BD2B305E5900CCDE31 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				C83577932B305D0500CCDE31 /* Team26App.swift */,
 				C83577952B305D0500CCDE31 /* ContentView.swift */,
+				C83577BD2B305E5900CCDE31 /* SplashScreen.swift */,
+				C80429172B309E00009C11C3 /* MainView.swift */,
 				C83577972B305D0700CCDE31 /* Assets.xcassets */,
 				C83577992B305D0700CCDE31 /* Preview Content */,
 			);
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83577BE2B305E5900CCDE31 /* SplashScreen.swift in Sources */,
+				C80429182B309E00009C11C3 /* MainView.swift in Sources */,
 				C83577962B305D0500CCDE31 /* ContentView.swift in Sources */,
 				C83577942B305D0500CCDE31 /* Team26App.swift in Sources */,
 			);
@@ -422,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Team26/Preview Content\"";
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Team26/Preview Content\"";
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -477,6 +487,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -496,6 +507,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -514,6 +526,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = A.Team26UITests;
@@ -531,6 +544,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AF53DG3XUB;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = A.Team26UITests;
