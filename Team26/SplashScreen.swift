@@ -11,15 +11,19 @@ struct SplashScreen: View {
         ZStack {
             Color("b")
                 .edgesIgnoringSafeArea(.all)
-            }
             
-            ZStack {
-                
+            Image("ba")
+                .resizable()
+                .scaledToFit()
+                .ignoresSafeArea()
+            
+            VStack {
                 Image("logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
             }
+        }.ignoresSafeArea()
 //            ZStack{
 //                Image("ba")
 //                    .ignoresSafeArea()

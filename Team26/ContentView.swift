@@ -14,9 +14,10 @@ struct ContentView: View {
             if showSplashScreen {
                 SplashScreen()
             } else {
-                            MainView()
+               MainView()
             }
         }
+        
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
