@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var imageArray = ["اربط الصوت بالصورة","اوجد الكلمة"]
-    @State var destinations = [ContentView(),]
+    @State var imageArray = ["إنطق الكلمة","إسمع الكلمة"]
+    @State var destinations = [color()]
     
     private let adaptaveColums = [
         GridItem(.adaptive(minimum: 170))
@@ -24,24 +24,21 @@ struct MainView: View {
                 
                 VStack{
                     
-                    //                VStack{
                     Image("logo")
                         .frame(width: 263 ,height: 161 )
+                    
                     ZStack (alignment: .trailing){
                         Text("آختار الفئة")
                             .font(.title)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color("2"))
                             .padding()
-                        //                        .frame(height: 1.0)
                             .multilineTextAlignment(.trailing)
                     }
-                    //                }
-                    //                .padding(.bottom,600)
-                    //                .frame(height: 5.0)
                     LazyVGrid(columns: adaptaveColums, spacing: 20){
                         ForEach(imageArray, id:\.self){ im in
-                            NavigationLink(destination: destinations[0]){
+                            NavigationLink(destination: destinations[0])
+                            {
                                 VStack{
                                     ZStack{
                                         if im == "" {

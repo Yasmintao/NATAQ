@@ -16,6 +16,8 @@
 		C83577AF2B305D0700CCDE31 /* Team26UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577AE2B305D0700CCDE31 /* Team26UITests.swift */; };
 		C83577B12B305D0700CCDE31 /* Team26UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577B02B305D0700CCDE31 /* Team26UITestsLaunchTests.swift */; };
 		C83577BE2B305E5900CCDE31 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83577BD2B305E5900CCDE31 /* SplashScreen.swift */; };
+		CC50043D2B3351200006E13D /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50043C2B3351200006E13D /* color.swift */; };
+		CC50043F2B3351340006E13D /* listenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50043E2B3351340006E13D /* listenable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		C83577AE2B305D0700CCDE31 /* Team26UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team26UITests.swift; sourceTree = "<group>"; };
 		C83577B02B305D0700CCDE31 /* Team26UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team26UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C83577BD2B305E5900CCDE31 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CC50043C2B3351200006E13D /* color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
+		CC50043E2B3351340006E13D /* listenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listenable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				C83577952B305D0500CCDE31 /* ContentView.swift */,
 				C83577BD2B305E5900CCDE31 /* SplashScreen.swift */,
 				C80429172B309E00009C11C3 /* MainView.swift */,
+				CC50043C2B3351200006E13D /* color.swift */,
+				CC50043E2B3351340006E13D /* listenable.swift */,
 				C83577972B305D0700CCDE31 /* Assets.xcassets */,
 				C83577992B305D0700CCDE31 /* Preview Content */,
 			);
@@ -265,7 +271,9 @@
 			files = (
 				C83577BE2B305E5900CCDE31 /* SplashScreen.swift in Sources */,
 				C80429182B309E00009C11C3 /* MainView.swift in Sources */,
+				CC50043F2B3351340006E13D /* listenable.swift in Sources */,
 				C83577962B305D0500CCDE31 /* ContentView.swift in Sources */,
+				CC50043D2B3351200006E13D /* color.swift in Sources */,
 				C83577942B305D0500CCDE31 /* Team26App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
