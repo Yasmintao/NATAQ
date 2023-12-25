@@ -42,14 +42,21 @@ struct ProgressBar: View {
 }
 struct color: View {
     
+    
+    
+    
+    @State var  showAlert = false
+    @State var isCorrect = false
     @State var progress = 0
     @State var page = 0
     
-    var textArr = ["ما هو الحيوان الذي يعيش بالماء؟", "من هو ملك الغابة؟", "ماهو لون البرتقال؟"]
-    var choice1 = ["سمكة", "أسد", "برتقالي"]
-    var choice2 = ["فيل", "حمار وحشي", "ازرق"]
-    var choice3 = ["قطة", "زرافة", "اخضر"]
+    var textArr = ["An animal that lives in the water","whish one is the lion?","what is the orange color?"]
+    var choice1 = ["fish", "lion", "orange"]
+    var choice2 = ["elephant", "zebra", "blue"]
+    var choice3 = ["cat", "gerraf", "green"]
     
+   @State var choosen = ""
+    @State var isCoreect = false
     
         
         var body: some View {
@@ -62,7 +69,8 @@ struct color: View {
                     Rectangle()
                     
                         .foregroundColor(.clear)
-                        .frame(width: 250, height: 42.49993)
+                        .frame(width: 250, height: 42)
+                    
                         .background(Color(red: 0.47, green: 0.45, blue: 0.18))
                         .cornerRadius(8)
                         .rotationEffect(Angle(degrees: -90))
@@ -77,6 +85,7 @@ struct color: View {
                         .offset(x:0,y:-125)
                         .foregroundColor(.white)
                         .rotationEffect(Angle(degrees: -90))
+                        .accessibilityLabel(textArr[page])
                     
                 }
                 
@@ -99,22 +108,45 @@ struct color: View {
                             ZStack(alignment: .bottom){
                                
                                 Image(choice1[page])
-                                
+                               .accessibilityLabel(choice1[page])
+
                                 ZStack{
                                     Rectangle()
                                         .foregroundColor(.clear)
-                                        .frame(width: 121, height: 21)
+                                        .frame(width: 147, height: 41)
                                         .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                         .cornerRadius(4)
                                     
                                     Text(choice1[page])
                                         .foregroundColor(.black)
                                     
-                                    
                                 }
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice1[page]
+                                    
+                                    if choosen == "fish" || choosen == "lion" || choosen == "orange" {
+                                        // Display an alert before setting isCorrect to true
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                           
+                                        }
+                                    ) 
+                                }
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                            
                         )
                         .rotationEffect(Angle(degrees: -90))
                     
@@ -134,12 +166,12 @@ struct color: View {
                             ZStack(alignment: .bottom){
                                
                                 Image(choice2[page])
-                                
+                                    .accessibilityLabel(choice2[page])
                                 ZStack{
                                     Rectangle()
                                         .foregroundColor(.clear)
-                                        .frame(width: 121, height: 21)
-                                        .background(Color(red: 0.85, green: 0.85, blue: 0.85))
+                                        .frame(width: 147, height: 41)
+                                       .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                         .cornerRadius(4)
                                     
                                     Text(choice2[page])
@@ -150,6 +182,49 @@ struct color: View {
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice1[page]
+                                    
+                                    if choosen == "fish" || choosen == "lion" || choosen == "orange" {
+                                        // Display an alert before setting isCorrect to true
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                           
+                                        }
+                                    )
+                                }
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .onTapGesture {
+                                    choosen = choice2[page]
+                                    
+                                    if choosen == "elephant" || choosen == "zebra " || choosen == "blue" {
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                           
+                                        }
+                                    )
+                                } .cornerRadius(10)
+                                .shadow(radius: 5)
+
                         )
                         .rotationEffect(Angle(degrees: -90))
                     
@@ -165,22 +240,21 @@ struct color: View {
                                 
                                 
                                     Image(choice3[page])
-                                
+                                    .accessibilityLabel(choice3[page])
                                 
 
                                 ZStack{
                                     if page == 0{
                                         Image(textArr[page])
                                             .foregroundColor(.clear)
-                                            .frame(width: 121, height: 21)
-                                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
+                                            .frame(width: 147, height: 41)
+                                           .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                             .cornerRadius(4)
                                     }
                                     else{
                                         Rectangle()
                                             .foregroundColor(.clear)
-                                            .frame(width: 121, height: 21)
-                                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
+                                            .frame(width: 121, height: 41)                                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                             .cornerRadius(4)
                                     }
                                     
@@ -192,6 +266,28 @@ struct color: View {
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice3[page]
+                                    
+                                    if choosen == "cat" || choosen == "gerraf" || choosen == "green" {
+                                       
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                          
+                                        }
+                                    )
+                                } .cornerRadius(10)
+                                .shadow(radius: 5)
+
                         )
                         .rotationEffect(Angle(degrees: -90))
                     Spacer()
@@ -206,7 +302,7 @@ struct color: View {
                         Spacer()
                         Spacer()
                         
-                        Button("السابق") {
+                        Button("Back") {
                             
                             if progress > 0{
                                 progress -= 1
@@ -214,7 +310,7 @@ struct color: View {
                             
                             page -= 1
                             
-                        }
+                        }.accessibilityLabel("Back")
                         .foregroundColor(.black)
                         .frame(width: 137, height: 40)
                         .background(Color(red: 0.85, green: 0.85, blue: 0.85))
@@ -223,13 +319,17 @@ struct color: View {
                         .rotationEffect(Angle(degrees: -90))
                         Spacer()
                         
-                        Button("التالي") {
-                            if progress < 5{
-                                progress += 1
-                            }
-                            page += 1
+                        Button("Next") {
+                            
+                           
+                                if progress < 5{
+                                    progress += 1
+                                }
+                                page += 1
+                         
                             
                         }
+                        .accessibilityLabel("Next")
                         .foregroundColor(.white)
                         .frame(width: 137, height: 40)
                         .background(Color(red: 0.47, green: 0.45, blue: 0.18))

@@ -17,6 +17,7 @@ struct SplashScreen: View {
                 .scaledToFit()
                 .ignoresSafeArea()
             
+            
             VStack {
                 Image("logo")
                     .resizable()

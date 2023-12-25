@@ -123,14 +123,16 @@ struct MainView: View {
                     Image("logo")
                         .frame(width: 263 ,height: 161 )
                         .padding(.bottom,500)
+                        .accessibilityLabel("Welcome to NATAQ app")
                  
                 }
                 VStack{
-                    Text("أختر الفئة")
+                    Text(" Choose the category")
 //                        .font(.Title)
                         .fontWeight(.bold)
                         .foregroundColor(Color("2"))
                         .font(.system(size: 24))
+                        .accessibilityLabel("choose the category")
                        
                        
 
@@ -149,10 +151,11 @@ struct MainView: View {
                                 .frame(width: 147, height: 184)
                                 .cornerRadius(10)
                                 .offset(x:0,y:20)
-                            Text("اربط الصوت بالصورة").bold()
+                            Text("Link the photo with the voice").bold()
                                 .foregroundColor(Color("2"))
                                 .font(.system(size: 18))
                                 .offset(x:0,y:20)
+                                .accessibilityLabel("link the photo with the voice")
                         }
                     }
                 
@@ -168,10 +171,11 @@ struct MainView: View {
                             
                             
                             
-                            Text("اوجد الكلمة").bold()
+                            Text("Find the photo").bold()
                                 .foregroundColor(Color("2"))
                                 .font(.system(size: 18))
                                 .offset(x:0,y:20)
+                                .accessibilityLabel("Find the photo")
                         }
                     }
                     .padding()

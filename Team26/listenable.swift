@@ -42,14 +42,24 @@ struct Progressbar: View {
 }
 struct listenable: View {
     
+    
+    
+    
+    @State var  showAlert = false
+    @State var isCorrect = false
     @State var progress = 0
     @State var page = 0
     
-    var textArr = ["ما هو لون السماء؟", "من اسرع حيوان بينهم؟", "ماهو لون البرتقال؟"]
+    var textArr = ["which one is The Color Blue?", " which one is the Tiger?", " what is The Orange color ?"]
     var voice1 = ["voice", "voice","voice"]
-    var choice3 = ["سمكة", "فهد", "ازرق"]
-    var choice2 = ["فيل", "حصان", "برتقالي"]
-    var choice1 = ["قطة", "نمر", "اخضر"]
+    var choice1 = ["blue", "cheetah", "orange"]
+    var choice2 = ["orange", "horse", "blue"]
+    var choice3 = ["green", "tiger", "green"]
+    
+    
+    @State var choosen = ""
+     @State var isCoreect = false
+    
     
     
         
@@ -67,6 +77,8 @@ struct listenable: View {
                         .background(Color(red: 0.47, green: 0.45, blue: 0.18))
                         .cornerRadius(8)
                         .rotationEffect(Angle(degrees: -90))
+                        .accessibilityLabel(textArr[page])
+
                     
                     
                     Spacer()
@@ -99,11 +111,12 @@ struct listenable: View {
                             ZStack(alignment: .bottom){
                                
                                 Image(choice1[page])
+                                    .accessibilityLabel(choice1[page])
                                 
                                 ZStack{
                                     Rectangle()
                                         .foregroundColor(.clear)
-                                        .frame(width: 121, height: 21)
+                                        .frame(width: 147, height: 41)
                                         .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                         .cornerRadius(4)
                                     
@@ -115,6 +128,29 @@ struct listenable: View {
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice1[page]
+                                    
+                                    if choosen == "fish" || choosen == "lion" || choosen == "orange" {
+                                        // Display an alert before setting isCorrect to true
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                           
+                                        }
+                                    )
+                                }
+                            
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
                         )
                         .rotationEffect(Angle(degrees: -90))
                     
@@ -134,11 +170,12 @@ struct listenable: View {
                             ZStack(alignment: .bottom){
                                
                                 Image(choice2[page])
-                                
+                                    .accessibilityLabel(choice2[page])
+
                                 ZStack{
                                     Rectangle()
                                         .foregroundColor(.clear)
-                                        .frame(width: 121, height: 21)
+                                        .frame(width: 147, height: 41)
                                         .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                         .cornerRadius(4)
                                     
@@ -150,6 +187,27 @@ struct listenable: View {
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice3[page]
+                                    
+                                    if choosen == "cat" || choosen == "gerraf" || choosen == "green" {
+                                       
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                          
+                                        }
+                                    )
+                                } .cornerRadius(10)
+                                .shadow(radius: 5)
                         )
                         .rotationEffect(Angle(degrees: -90))
                     
@@ -165,21 +223,22 @@ struct listenable: View {
                                 
                                 
                                     Image(choice3[page])
-                                
+                                    .accessibilityLabel(choice3[page])
+
                                 
 
                                 ZStack{
                                     if page == 0{
                                         Image(textArr[page])
                                             .foregroundColor(.clear)
-                                            .frame(width: 121, height: 21)
+                                            .frame(width: 147, height: 41)
                                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                             .cornerRadius(4)
                                     }
                                     else{
                                         Rectangle()
                                             .foregroundColor(.clear)
-                                            .frame(width: 121, height: 21)
+                                            .frame(width: 147, height: 41)
                                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                                             .cornerRadius(4)
                                     }
@@ -192,6 +251,27 @@ struct listenable: View {
                                 .padding(.bottom, -10)
                                 
                             }
+                                .onTapGesture {
+                                    choosen = choice3[page]
+                                    
+                                    if choosen == "cat" || choosen == "gerraf" || choosen == "green" {
+                                       
+                                        showAlert = true
+                                    }
+                                    
+                                    isCorrect = true
+                                }
+
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Good job !"),
+                                        message: Text("Right Answe"),
+                                        dismissButton: .default(Text("OK")) {
+                                          
+                                        }
+                                    )
+                                } .cornerRadius(10)
+                                .shadow(radius: 5)
                         )
                         .rotationEffect(Angle(degrees: -90))
                     Spacer()
